@@ -43,6 +43,11 @@ img{
         justify-content: center;
         align-items: center;
 
+        background-image: url('../img/bottom.svg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+
         #time{
             position: absolute;
             top: 0;

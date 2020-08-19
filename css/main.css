@@ -52,6 +52,10 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("../img/bottom.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #app .landing #time {
