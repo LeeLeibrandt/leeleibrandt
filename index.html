@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Lee Leibrandt</title>
+</head>
+<body onload="startTime()">
+    <div id="app">
+        <div class="container landing" id="home">
+            <div id="time"></div>
+            <div class="landing-info">
+                <h1>BEAUTIFUL <span>SIMPLICITY</span> AGILE <span>DEVELOPMENT</span></h1>
+            </div>
+            <img src="./img/bottom.svg" alt="bottom-img" />
+            <a href="#about" class="scroll-down">
+                <div class="mouse"><span></span></div>
+                <div class="arrow"><span></span></div>
+            </a>
+        </div>
+
+        <div class="container about" id="about">
+            <div class="about-img">
+                <img src="./img/main.jpg" alt="main" />
+            </div>
+            <div class="about-details">
+                <h1>About <span>myself.</span></h1>
+                <h6><span>Lee Leibrandt - Developer</span></h6>
+                <p>Im a Full stack web developer base in Cape Town. I spend most of my days programming and learning new innovative technologies.</p>
+                <p>Since graduation early this year, I've been building few projects. I've been working remotely and so far its been a unique experiance which I began to love.</p>
+                <p>Im aspiring to pursue a role as junior software developer. I have a great passion for web design by creating unique and beautiful websites. I offer a wide range of services to deliver industry standards.</p>
+            </div>
+        </div>
+        
+        <div class="section-main">
+            <div class="developer">
+                <div class="dev-main">
+                    <h1>Web <span>Design</span></h1>
+                    <p>I constantly keep up with new trendy web designs, to implement into my own projects. I have a eye and capacity for innovative designs which I can implement into projects.</p>
+                    <h1>Web <span>Development</span></h1>
+                    <p>Plays a major role to what have to offer. Full website performing both front and back end. I have the capacity to fullfill taskes with innovative technologies.</p>
+                </div>
+                <div class="dev-img">
+                    <img src="./img/01.png" alt="img" />
+                </div>
+            </div>
+            <div class="developer">
+                <div class="dev-img">
+                    <img src="./img/03.png" alt="img" />
+                </div>
+                <div class="dev-main">
+                    <h1>Software <span>Technology Tools</span> used.</h1>
+                    <h6><span>Programming skills</span></h6>
+                    <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        JAVA SCRIPT / J QUERY
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        HTML 5 / CSS 3
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        SASS / LESS / BOOTSTRAP
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        PHP / PYTHON
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        MySQL / MONGO DATABASE
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        REACT / VUE .JS
+                      </p>
+                      <p> 
+                        <i class="fa fa-check-circle-o"></i>
+                        VISUAL STUDIO CODE / SKETCH 
+                      </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="promise">
+            <div class="feature">
+              <h1>From <span>big to small clients,</span> two things I <span>always promise:</span></h1>
+              <div class="container">
+                <div class="promise">
+                  <h2><span>1</span> Designs you will love</h2>
+                  <p>Web development is what I love doing and delivering results that you are happy with. We'll work as a team and we'll bring your vision into reality!</p>
+                </div>
+                <div class="promise">
+                  <h2><span>2</span> A healthy freelance relationship</h2>
+                  <p>No dramas or difficult relationships. I'm here to make your life easier, solve problems and help you grow your business.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tablink" onclick="openPage('projects', this, '#f7fe72')">Projects</button>
+            <button id="defaultOpen" class="tablink" onclick="openPage('services', this, '#f7fe72')">Packages</button>
+            <button class="tablink" onclick="openPage('Calender', this, '#f7fe72')">Mobile</button>
+
+            <div id="services" class="tabcontent">
+                <div id="services">
+                    <h1>Professional <span>Affordable</span> Websites <span>Packages.</span></h1>
+                    <div class="container">
+                        <div class="cards">
+                            <div class="title">Basic</div>
+                            <div class="price line space">R200</div>
+                            <div class="details">
+                                <p class="line space">Single Page</p>
+                                <p class="line space">1 month free support</p>
+                                <p class=" space">Mobile friendly design</p>
+                            </div>
+                            <a href="#">
+                                <div class="btn"><p>Learn more</p></div> 
+                            </a>
+                        </div>
+                        <div class="cards main">
+                            <div class="title">Intermediate</div>
+                            <div class="price line space">R700</div>
+                            <div class="details">
+                                <p class="line space">Two Page</p>
+                                <p class="line space">1 month free support</p>
+                                <p class=" space">Mobile friendly design</p>
+                            </div>
+                            <a href="#">
+                                <div class="btn"><p>Learn more</p></div>
+                            </a>
+                        </div>
+                        <div class="cards">
+                            <div class="title">Standard</div>
+                            <div class="price line space">R1400</div>
+                            <div class="details">
+                                <p class="line space">Three Page</p>
+                                <p class="line space">1 month free suppport</p>
+                                <p class=" space">Mobile friendly design</p>
+                            </div>
+                            <a href="#">
+                                <div class="btn"><p>Learn more</p></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="tabcontent">
+                <div id="carousel">
+                    <div class="projects">
+                        <div class="project">
+                            <div class="overlay"></div>
+                            <img src="./img/todo.jpeg" alt="">
+                        </div>
+                        <div class="project">
+                            <div class="overlay"></div>
+                            <img src="./img/todo.jpeg" alt="">
+                        </div>
+                        <div class="project">
+                            <div class="overlay"></div>
+                            <img src="./img/todo.jpeg" alt="">
+                        </div>
+                        <div class="project">
+                            <div class="overlay"></div>
+                            <img src="./img/todo.jpeg" alt="">
+                        </div>
+                        <div class="project">
+                            <div class="overlay"></div>
+                            <img src="./img/todo.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="Calender" class="tabcontent">
+                <div class="section-phone">
+                    <div class="screen">
+                        <img src="./img/02.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="foot-content">
+                <div class="foot-about">
+                    <h1>About</h1>
+                    <p>My aim is to provide cost-effective, problem solving solutions, unique and beautiful websites to all of my clients. I offer a wide range of designs services to deliver industry standards and best user experiance, to keep your end-user's comming back!</p>
+                </div>
+                <div class="foot-find">
+                    <h1>Find US</h1>
+                    <h4>Name:</h4>
+                    <p>Lee Leibrandt</p>
+                    <h4>Email:</h4>
+                    <p>leeleibrandt9@gmail.com</p>
+                    <h4>Hours:</h4>
+                    <p>Monday - Friday: 9:00AM - 15:00PM</p>
+                </div>
+                <div class="foot-social">
+                    <h1>Socials</h1>
+                    <div class="socials">
+                        <a href="https://github.com/LeeLeibrandt"><i class="fa fa-github"></i></a>
+                        <a href="https://www.instagram.com/lee.it_/"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/lee-leibrandt-5563521a5/"><i class="fa fa-linkedin-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#home" class="scroll-down">
+                <div class="arrow"><span></span></div>
+                <div class="mouse"><span></span></div>
+            </a>
+        </div>
+        
+    </div>
+</body>
+<script src="./js/main.js"></script>
+</html>

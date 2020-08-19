@@ -1,0 +1,161 @@
+$dark:rgb(78, 78, 78);
+$light: #fff;
+$main: rgb(154, 255, 221);
+$orange: #f7fe72;
+$secondary: rgb(149, 255, 241);
+$foot: rgb(22, 24, 81);
+
+@keyframes scroll{
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+@keyframes arrow{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .25;
+    }
+    50%{
+        opacity: 1.5;
+    }
+    75%{
+        opacity: .75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:800px){
+    #app{
+        width: 100vw;
+        height: 100%;
+        .landing{
+            width: 100%;
+            .landing-info{
+                h1{
+                    padding: 0;
+                    font-size: 30px;
+                }
+            }
+        }
+        .about{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            .about-img, .about-details{
+                width: 100%;
+                height: 100%;
+            }
+            .about-img{
+                order: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+            }
+            .about-details{
+                order: 2;
+               padding: 1rem;
+                p{
+                    padding-right: 0;
+                }
+                h1{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 3rem;
+                }
+            }
+        }
+        .developer{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            .dev-img,
+            .dev-main{
+                width: 100%;
+                height: 100%;
+            }
+            .dev-img{
+                order: 1;
+            }
+            .dev-main{
+                order: 2;
+            }
+        }
+        #services{
+            width: 100%;
+            height: 100%;
+            h1{
+                padding: 0 0 3rem 0;
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                .cards{
+                    width: 300px;
+                    margin: 0;
+                }
+            }
+        }
+        #promise{
+            
+            .feature{
+                h1{
+                    width: 70%;
+                    margin-left: 2rem;
+                }
+                .container{
+                    display: flex;
+                    flex-wrap: wrap;  
+                    .promise{
+                        width: 100%;   
+                    } 
+                    .promise:nth-child(1){
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        .footer{
+            p,h1,h4{
+                width: 60%;
+            }
+            .foot-content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                .foot-about,
+                .foot-find,
+                .foot-social{
+                    width: 100%;
+                    height: 100%;
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    #app{
+        .developer{
+
+            .dev-main {
+                padding: 1rem; 
+            }
+        }
+    }
+}
