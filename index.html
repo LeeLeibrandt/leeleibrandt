@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <title>Lee Leibrandt</title>
 </head>
+
 <body onload="startTime()">
     <div id="app">
         <div class="container landing" id="home">
             <div id="time"></div>
             <div class="landing-info">
-                <h1>BEAUTIFUL <span>SIMPLICITY</span> AGILE <span>DEVELOPMENT</span></h1>
+                <h1>BEAUTIFUL, <span>SIMPLICITY</span> AGILE <span>DEVELOPMENT</span></h1>
+                <br>
+<!--                <h2 class="name"-->
+<!--                    style="-->
+<!--                    /*-webkit-text-stroke: 1px black;*/-->
+<!--                    /*color: transparent;*/-->
+<!--                    font-size: 35px;"-->
+<!--                >Lee Leibrandt</h2>-->
             </div>
             <!-- <img src="./img/bottom.svg" alt="bottom-img" /> -->
             <a href="#about" class="scroll-down">
@@ -29,9 +37,11 @@
             <div class="about-details">
                 <h1>About <span>myself.</span></h1>
                 <h6><span>Lee Leibrandt - Developer</span></h6>
-                <p>Im am Junior Software Developer base in Cape Town.</p>
-                <p>I have hands on experiance developing projects ranging from big to small companies.</p>
-                <p>I have a great passion for web design by creating unique and beautiful websites. I offer a wide range of services to deliver industry standards.</p>
+                <p>
+                    I am a Software Engineer based in Cape Town with a solid hands-on experience in developing projects for companies of varying scales. My portfolio encompasses a diverse range, spanning from small startups to larger enterprises.
+                    My true passion lies in web design, where I find joy in crafting distinctive and visually appealing websites. I take pride in offering a comprehensive array of services that consistently adhere to industry standards.
+                    My commitment to delivering top-notch results fuels my dedication to each project I undertake.
+                </p>
             </div>
         </div>
         
@@ -39,14 +49,16 @@
             <div class="developer">
                 <div class="dev-main">
                     <h1>Web <span>Design</span></h1>
-                    <p>I constantly keep up with new trendy web designs, to implement into my own projects. I have a eye and capacity for innovative designs which I can implement into projects.</p>
+                    <p>I continuously stay updated with the latest trends in web design, always seeking inspiration to integrate cutting-edge elements into my own projects. With a keen eye and a knack for innovation, I possess the ability to infuse unique and creative designs into the projects I work on.</p>
+                    <br>
                     <h1>Web <span>Development</span></h1>
-                    <p>Plays a major role to what have to offer. Full website performing both front and back end. I have the capacity to fullfill taskes with innovative technologies.</p>
+                    <p>My skillset plays a pivotal role in defining what I bring to the table. I specialize in developing complete websites that encompass both front-end and back-end functionalities. With a knack for embracing innovative technologies, I am fully equipped to tackle tasks with creativity and efficiency.</p>
                 </div>
                 <div class="dev-img">
                     <img src="./img/01.png" alt="img" />
                 </div>
             </div>
+
             <div class="developer">
                 <div class="dev-img">
                     <img src="./img/03.png" alt="img" />
@@ -96,11 +108,12 @@
               <div class="container">
                 <div class="promise">
                   <h2><span>1</span> Designs you will love</h2>
-                  <p>Web development is what I love doing and delivering results that you are happy with. We'll work as a team and we'll bring your vision into reality!</p>
+                  <p>Web development is my true passion, and my ultimate goal is to deliver results that exceed your expectations and leave you thoroughly satisfied. By collaborating as a team, we will seamlessly merge your vision with my expertise to turn it into a tangible reality. Let's work together to create something exceptional!</p>
                 </div>
+
                 <div class="promise">
                   <h2><span>2</span> A healthy freelance relationship</h2>
-                  <p>No dramas or difficult relationships. I'm here to make your life easier, solve problems and help you grow your business.</p>
+                  <p>You can count on a smooth and hassle-free experience with me. I'm here to simplify your life, tackle challenges head-on, and contribute to the growth of your business. Let's work together towards success, without any unnecessary complications or difficulties.</p>
                 </div>
               </div>
             </div>
@@ -112,7 +125,6 @@
             <button class="tablink" onclick="openPage('Calender', this, '#f7fe72')">Mobile</button>
 
             <div id="services" class="tabcontent">
-                <div id="services">
                     <h1>Professional <span>Affordable</span> Websites <span>Packages.</span></h1>
                     <div class="container">
                         <div class="cards">
@@ -123,7 +135,7 @@
                                 <p class="line space">1 month free support</p>
                                 <p class=" space">Mobile friendly design</p>
                             </div>
-                            <a href="#">
+                            <a href="#learn-more">
                                 <div class="btn"><p>Learn more</p></div> 
                             </a>
                         </div>
@@ -135,7 +147,7 @@
                                 <p class="line space">1 month free support</p>
                                 <p class=" space">Mobile friendly design</p>
                             </div>
-                            <a href="#">
+                            <a href="#learn-more">
                                 <div class="btn"><p>Learn more</p></div>
                             </a>
                         </div>
@@ -147,12 +159,11 @@
                                 <p class="line space">1 month free suppport</p>
                                 <p class=" space">Mobile friendly design</p>
                             </div>
-                            <a href="#">
+                            <a href="#learn-more">
                                 <div class="btn"><p>Learn more</p></div>
                             </a>
                         </div>
                     </div>
-                </div>
             </div>
 
             <div id="projects" class="tabcontent">
@@ -192,10 +203,10 @@
         </div>
 
         <div class="footer">
-            <div class="foot-content">
+            <div id="learn-more" class="foot-content">
                 <div class="foot-about">
                     <h1>About</h1>
-                    <p>My aim is to provide cost-effective, problem solving solutions, unique and beautiful websites to all of my clients. I offer a wide range of designs services to deliver industry standards and best user experiance, to keep your end-user's comming back!</p>
+                    <p>I am dedicated to delivering cost-effective, solution-driven outcomes. My goal is to create exceptional, visually captivating websites for all clients. With an extensive array of design services, I am committed to meeting industry standards and ensuring the best user experience. My aim is to create websites that not only stand out but also leave a lasting impression, keeping your end-users coming back for more.</p>
                 </div>
                 <div class="foot-find">
                     <h1>Find US</h1>
@@ -223,5 +234,6 @@
         
     </div>
 </body>
+
 <script src="./js/main.js"></script>
 </html>

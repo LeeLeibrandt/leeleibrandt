@@ -59,6 +59,12 @@ img{
             text-align: center;
             position: relative;
             top: -50px;
+
+            h2 {
+                -webkit-text-stroke: 1px black;
+                color: transparent;
+            }
+
             h1{
                 padding: 0 4rem;
                 font-size: 50px;
@@ -170,15 +176,16 @@ img{
         }
     }
     .developer{
-        height: 100%;
         width: 100%;
         padding: 2rem 0;
-        display: flex;
         background: linear-gradient(130deg,$main 60%,$light 40%);
+
         .dev-main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 50%;
-            height: 100%;
-            padding: 3rem 0 0 3rem;
+
             h1{
                 width: 60%;
                 margin-bottom: 1rem;
