@@ -155,14 +155,7 @@ function animateCounter(element) {
 }
 
 // ========================================
-// EmailJS Configuration
-// ========================================
-// Initialize EmailJS with your public key
-// TODO: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key from https://dashboard.emailjs.com/admin/account
-emailjs.init('u71fDZFQEuAakDQik');
-
-// ========================================
-// Form Handling with EmailJS
+// Form Handling with Serverless Function
 // ========================================
 const contactForm = document.getElementById('contactForm');
 
@@ -176,23 +169,41 @@ if (contactForm) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Send email using EmailJS
-    // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual values from EmailJS
-    emailjs.sendForm('service_ti5o3t9', 'template_xtty5i3', contactForm)
-      .then(() => {
+    // Get form data
+    const formData = {
+      name: contactForm.querySelector('#name').value,
+      email: contactForm.querySelector('#email').value,
+      subject: contactForm.querySelector('#subject').value,
+      message: contactForm.querySelector('#message').value
+    };
+
+    try {
+      // Send email via serverless function
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
         // Success
         showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
         contactForm.reset();
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      })
-      .catch((error) => {
+      } else {
         // Error
-        console.error('EmailJS Error:', error);
         showNotification('Failed to send message. Please try again later.', 'error');
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-      });
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      showNotification('Failed to send message. Please try again later.', 'error');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   });
 }
 
