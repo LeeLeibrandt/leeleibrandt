@@ -2,64 +2,64 @@
 
 Professional portfolio website showcasing my work as a Software Engineer.
 
-## Setup Instructions
+## EmailJS Security Setup
 
-### 1. Install Netlify CLI (if deploying locally)
+To protect your email service from abuse:
+
+### 1. Enable Domain Restrictions in EmailJS
+
+1. Go to https://dashboard.emailjs.com/admin/account
+2. Under **"Allowed Origins"**, add your domain:
+   - For production: `https://your-domain.com`
+   - For testing locally: `http://localhost:*` or `http://127.0.0.1:*`
+3. Click **Save**
+
+This prevents anyone from using your public key on other websites.
+
+### 2. Enable reCAPTCHA (Optional but Recommended)
+
+1. Go to https://dashboard.emailjs.com/admin/account
+2. Scroll to **"Security"**
+3. Enable **"reCAPTCHA v3"**
+4. Get your reCAPTCHA site key from Google
+5. Add it to EmailJS settings
+
+This blocks bots from abusing your email service.
+
+### 3. Monitor Usage
+
+- Check your EmailJS dashboard regularly for unusual activity
+- Set up usage alerts in EmailJS settings
+- EmailJS free tier: 200 emails/month
+
+## Local Development
+
+Simply open `index.html` in your browser or use a local server:
+
 ```bash
-npm install -g netlify-cli
+# Python 3
+python -m http.server 8080
+
+# Node.js
+npx http-server -p 8080
 ```
 
-### 2. Configure Environment Variables
+Then visit: `http://localhost:8080`
 
-Create a `.env` file in the root directory (copy from `.env.example`):
-```bash
-cp .env.example .env
-```
+## Deployment
 
-Then add your EmailJS credentials to `.env`:
-- `EMAILJS_SERVICE_ID` - Your EmailJS service ID
-- `EMAILJS_TEMPLATE_ID` - Your EmailJS template ID
-- `EMAILJS_PUBLIC_KEY` - Your EmailJS public key
-- `EMAILJS_PRIVATE_KEY` - Your EmailJS private key
+Deploy to any static hosting:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any web host
 
-Get these from: https://dashboard.emailjs.com/admin
+**After deploying, remember to add your production domain to EmailJS Allowed Origins!**
 
-### 3. Deploy to Netlify
+## How It Works
 
-#### Option A: Deploy via Netlify UI
-1. Push your code to GitHub
-2. Go to https://app.netlify.com
-3. Click "Add new site" → "Import an existing project"
-4. Connect your GitHub repository
-5. Add environment variables in: Site settings → Environment variables
-6. Deploy!
-
-#### Option B: Deploy via CLI
-```bash
-netlify login
-netlify init
-netlify deploy --prod
-```
-
-Add environment variables via CLI:
-```bash
-netlify env:set EMAILJS_SERVICE_ID "your_value"
-netlify env:set EMAILJS_TEMPLATE_ID "your_value"
-netlify env:set EMAILJS_PUBLIC_KEY "your_value"
-netlify env:set EMAILJS_PRIVATE_KEY "your_value"
-```
-
-### 4. Test Locally
-```bash
-netlify dev
-```
-
-## Security Notes
-
-- **Never commit `.env`** - It's already in `.gitignore`
-- All email credentials are stored securely in environment variables
-- The serverless function runs on Netlify's servers, keeping credentials hidden from the browser
-
-## Contact Form
-
-The contact form uses a secure serverless function to send emails via EmailJS. No credentials are exposed to the browser.
+The contact form uses EmailJS with:
+- ✅ Public key visible in code (by design - it's meant to be public)
+- ✅ Domain restrictions prevent unauthorized use
+- ✅ reCAPTCHA blocks bots
+- ✅ No backend server needed

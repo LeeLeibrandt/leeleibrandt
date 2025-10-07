@@ -155,7 +155,12 @@ function animateCounter(element) {
 }
 
 // ========================================
-// Form Handling with Serverless Function
+// EmailJS Configuration (Public Key Only - Restricted by Domain)
+// ========================================
+emailjs.init('u71fDZFQEuAakDQik');
+
+// ========================================
+// Form Handling with EmailJS
 // ========================================
 const contactForm = document.getElementById('contactForm');
 
@@ -169,41 +174,20 @@ if (contactForm) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Get form data
-    const formData = {
-      name: contactForm.querySelector('#name').value,
-      email: contactForm.querySelector('#email').value,
-      subject: contactForm.querySelector('#subject').value,
-      message: contactForm.querySelector('#message').value
-    };
-
-    try {
-      // Send email via serverless function
-      const response = await fetch('/.netlify/functions/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        // Success
+    // Send email using EmailJS
+    emailjs.sendForm('service_ti5o3t9', 'template_xtty5i3', contactForm)
+      .then(() => {
         showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
         contactForm.reset();
-      } else {
-        // Error
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      })
+      .catch((error) => {
+        console.error('EmailJS Error:', error);
         showNotification('Failed to send message. Please try again later.', 'error');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      showNotification('Failed to send message. Please try again later.', 'error');
-    } finally {
-      submitBtn.textContent = originalText;
-      submitBtn.disabled = false;
-    }
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
   });
 }
 
