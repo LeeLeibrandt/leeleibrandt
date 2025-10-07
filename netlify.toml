@@ -1,5 +1,13 @@
 [build]
   functions = "netlify/functions"
+  publish = "."
+
+[dev]
+  command = ""
+  targetPort = 8080
+  port = 8888
+  publish = "."
+  autoLaunch = false
 
 [functions]
   node_bundler = "esbuild"
