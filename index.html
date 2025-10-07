@@ -3,237 +3,460 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <meta name="description" content="Lee Leibrandt - Software Engineer with 4+ years of experience specializing in React, React Native, Angular, Node.js, and AWS" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <title>Lee Leibrandt</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Lee Leibrandt | Software Engineer</title>
+    <style>
+        /* Ensure content is visible on load */
+        body { visibility: visible !important; }
+    </style>
 </head>
 
-<body onload="startTime()">
-    <div id="app">
-        <div class="container landing" id="home">
-            <div id="time"></div>
-            <div class="landing-info">
-                <h1>BEAUTIFUL, <span>SIMPLICITY</span> AGILE <span>DEVELOPMENT</span></h1>
-                <br>
-<!--                <h2 class="name"-->
-<!--                    style="-->
-<!--                    /*-webkit-text-stroke: 1px black;*/-->
-<!--                    /*color: transparent;*/-->
-<!--                    font-size: 35px;"-->
-<!--                >Lee Leibrandt</h2>-->
-            </div>
-            <!-- <img src="./img/bottom.svg" alt="bottom-img" /> -->
-            <a href="#about" class="scroll-down">
-                <div class="mouse"><span></span></div>
-                <div class="arrow"><span></span></div>
-            </a>
-        </div>
-
-        <div class="container about" id="about">
-            <div class="about-img">
-                <img src="./img/main.jpg" alt="main" />
-            </div>
-            <div class="about-details">
-                <h1>About <span>myself.</span></h1>
-                <h6><span>Lee Leibrandt - Developer</span></h6>
-                <p>
-                    I am a Software Engineer based in Cape Town with a solid hands-on experience in developing projects for companies of varying scales. My portfolio encompasses a diverse range, spanning from small startups to larger enterprises.
-                    My true passion lies in web design, where I find joy in crafting distinctive and visually appealing websites. I take pride in offering a comprehensive array of services that consistently adhere to industry standards.
-                    My commitment to delivering top-notch results fuels my dedication to each project I undertake.
-                </p>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">LL</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-        
-        <div class="section-main">
-            <div class="developer">
-                <div class="dev-main">
-                    <h1>Web <span>Design</span></h1>
-                    <p>I continuously stay updated with the latest trends in web design, always seeking inspiration to integrate cutting-edge elements into my own projects. With a keen eye and a knack for innovation, I possess the ability to infuse unique and creative designs into the projects I work on.</p>
-                    <br>
-                    <h1>Web <span>Development</span></h1>
-                    <p>My skillset plays a pivotal role in defining what I bring to the table. I specialize in developing complete websites that encompass both front-end and back-end functionalities. With a knack for embracing innovative technologies, I am fully equipped to tackle tasks with creativity and efficiency.</p>
-                </div>
-                <div class="dev-img">
-                    <img src="./img/01.png" alt="img" />
-                </div>
-            </div>
+    </nav>
 
-            <div class="developer">
-                <div class="dev-img">
-                    <img src="./img/03.png" alt="img" />
-                </div>
-                <div class="dev-main">
-                    <h1>Software <span>Technology Tools</span> used.</h1>
-                    <h6><span>Programming skills</span></h6>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        HTML 5 / CSS 3
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hi, my name is</p>
+                    <h1 class="hero-title">Lee Leibrandt</h1>
+                    <h2 class="hero-subtitle">Software Engineer</h2>
+                    <p class="hero-description">
+                        I turn ideas into reality through code. From sleek mobile apps to powerful web platforms,
+                        I craft digital solutions that users love and businesses rely on.
                     </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        SASS / BOOTSTRAP
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        JAVA SCRIPT / REACT / ANGULAR
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        PHP / NODE / JAVA
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        MySQL
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        GIT / BITBUCKET / JIRA
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        IONIC / ANDROID STUDIO
-                    </p>
-                    <p> 
-                        <i class="fa fa-check-circle-o"></i>
-                        VISUAL STUDIO CODE  / JETBRAIN TOOLBOX / POSTMAN
-                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="./resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div id="promise">
-            <div class="feature">
-              <h1>From <span>big to small clients,</span> two things I <span>always promise:</span></h1>
-              <div class="container">
-                <div class="promise">
-                  <h2><span>1</span> Designs you will love</h2>
-                  <p>Web development is my true passion, and my ultimate goal is to deliver results that exceed your expectations and leave you thoroughly satisfied. By collaborating as a team, we will seamlessly merge your vision with my expertise to turn it into a tangible reality. Let's work together to create something exceptional!</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="./img/main.jpg" alt="Lee Leibrandt" />
+                        <div class="image-overlay"></div>
+                    </div>
                 </div>
-
-                <div class="promise">
-                  <h2><span>2</span> A healthy freelance relationship</h2>
-                  <p>You can count on a smooth and hassle-free experience with me. I'm here to simplify your life, tackle challenges head-on, and contribute to the growth of your business. Let's work together towards success, without any unnecessary complications or difficulties.</p>
+                <div class="about-text">
+                    <h3>Software Engineer based in Cape Town</h3>
+                    <p>
+                        With a passion for tech and innovation, I specialize in developing smart, efficient software
+                        solutions that tackle real-world problems and enhance user experiences. My journey in software
+                        engineering has taken me through diverse projects ranging from innovative startups to enterprise-level applications.
+                    </p>
+                    <p>
+                        I specialize in building scalable, high-performance web and mobile applications using modern technologies like
+                        React, React Native, Angular, Node.js, and cloud platforms. My approach combines technical excellence with strategic thinking,
+                        ensuring that every solution not only meets current needs but scales for future growth.
+                    </p>
+                    <p>
+                        Beyond coding, I'm passionate about crafting innovative solutions, collaborating with cross-functional teams,
+                        and contributing to the seamless integration of technologies to deliver exceptional software products.
+                        I believe in writing clean, efficient code aligned with industry best practices.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>30+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>12+</h4>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
         </div>
+    </section>
 
-        <div class="tabs">
-            <button id="defaultOpen" class="tablink" onclick="openPage('projects', this, '#f7fe72')">Projects</button>
-            <button  class="tablink" onclick="openPage('services', this, '#f7fe72')">Packages</button>
-            <button class="tablink" onclick="openPage('Calender', this, '#f7fe72')">Mobile</button>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2023 - Present</div>
+                        <h3>Intermediate Software Engineer</h3>
+                        <h4>Skywalk Innovations</h4>
+                        <p>
+                            Contributing to the full lifecycle of software development, from design and implementation to testing and maintenance.
+                            Writing clean, efficient code aligned with industry best practices, collaborating closely with cross-functional teams
+                            to deliver high-quality software solutions. Focused on problem-solving, optimizing software performance, and ensuring scalability.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Actively engage in code reviews and mentoring to maintain code quality standards</li>
+                            <li>Collaborate with QA and product teams to ensure alignment with project goals</li>
+                            <li>Maintain technical documentation and stay current with evolving technologies</li>
+                            <li>Optimize software performance and ensure scalability across applications</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2020 - Feb 2023</div>
+                        <h3>Software Engineer</h3>
+                        <h4>Skywalk Innovations</h4>
+                        <p>
+                            Engaged in a dynamic range of tasks extending across frontend, backend, and mobile development.
+                            Crafted innovative solutions, collaborated with cross-functional teams, and contributed to the
+                            seamless integration of technologies to deliver exceptional software products. Thrived in the
+                            ever-evolving landscape of software engineering with a keen eye for detail.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Developed full-stack applications using React, Angular, Node.js, and React Native</li>
+                            <li>Contributed to seamless integration of frontend, backend, and mobile technologies</li>
+                            <li>Stayed at the forefront of industry trends and emerging technologies</li>
+                            <li>Collaborated with teams to deliver high-quality software products</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020</div>
+                        <h3>Education & Training</h3>
+                        <h4>Code Space Academy & False Bay College</h4>
+                        <p>
+                            Completed comprehensive training in Full Stack Web Development and Computer Science & Technology,
+                            earning Higher National Certificates. Gained foundational knowledge in software development,
+                            programming languages, and modern web technologies.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Higher National Certificate - Full Stack Web Development (Code Space Academy)</li>
+                            <li>Higher National Certificate - Computer Science & Technology (False Bay College)</li>
+                            <li>AWS Certified Cloud Practitioner (Udemy - Jul 2024)</li>
+                            <li>IBM Cloud Pak for Data (IBM - Aug 2022)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div id="services" class="tabcontent">
-                    <h1>Professional <span>Affordable</span> Websites <span>Packages.</span></h1>
-                    <div class="container">
-                        <div class="cards">
-                            <div class="title">Basic</div>
-                            <div class="price line space">R200</div>
-                            <div class="details">
-                                <p class="line space">Single Page</p>
-                                <p class="line space">1 month free support</p>
-                                <p class=" space">Mobile friendly design</p>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">JavaScript (ES6+)</span>
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">Vue.js</span>
+                        <span class="tech-badge">HTML5/CSS3</span>
+                        <span class="tech-badge">SASS/SCSS</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Express.js</span>
+                        <span class="tech-badge">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & Storage</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Supabase</span>
+                        <span class="tech-badge">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">AWS</span>
+                        <span class="tech-badge">Azure</span>
+                        <span class="tech-badge">Serverless</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">React Native</span>
+                        <span class="tech-badge">Ionic</span>
+                        <span class="tech-badge">Android Studio</span>
+                        <span class="tech-badge">Progressive Web Apps (PWA)</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Workflow</h3>
+                    <div class="tech-stack">
+                        <span class="tech-badge">Git</span>
+                        <span class="tech-badge">Jira</span>
+                        <span class="tech-badge">VS Code</span>
+                        <span class="tech-badge">JetBrains IDEs</span>
+                        <span class="tech-badge">Postman</span>
+                        <span class="tech-badge">Webpack</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/ecom.png" alt="E-commerce Platform" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Platform</h3>
+                        <p>Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/formula.png" alt="Formula Tracker" />
+                        <div class="project-overlay">
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Formula Tracker Application</h3>
+                        <p>Real-time sports tracking application with live updates, statistics, and interactive visualizations.</p>
+                        <div class="project-tech">
+                            <span>Angular</span>
+                            <span>TypeScript</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/marvel.png" alt="Marvel Universe" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Marvel Universe Explorer</h3>
+                        <p>Interactive application Marvel survey game.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/sundays.png" alt="Restaurant App" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Restaurant Management System</h3>
+                        <p>Complete restaurant solution with online ordering, reservation system, and kitchen management.</p>
+                        <div class="project-tech"></div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./img/todo.jpeg" alt="Task Manager" />
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Collaborative Task Manager</h3>
+                        <p>Team collaboration tool with real-time updates, project management, and productivity analytics.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="project-card">-->
+<!--                    <div class="project-image">-->
+<!--                        <img src="./img/02.png" alt="Mobile App" />-->
+<!--                        <div class="project-overlay"></div>-->
+<!--                    </div>-->
+<!--                    <div class="project-info">-->
+<!--                        <h3>Mobile Banking App</h3>-->
+<!--                        <p>Secure mobile banking application with biometric authentication and real-time transaction monitoring.</p>-->
+<!--                        <div class="project-tech">-->
+<!--                            <span>React Native</span>-->
+<!--                            <span>Node.js</span>-->
+<!--                            <span>AWS</span>-->
+<!--                            <span>Encryption</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                        Whether you need a full-stack developer, technical consultant, or team lead, I'd love to hear from you.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:leeleibrandt9@gmail.com">leeleibrandt9@gmail.com</a>
                             </div>
-                            <a href="#learn-more">
-                                <div class="btn"><p>Learn more</p></div> 
-                            </a>
                         </div>
-                        <div class="cards main">
-                            <div class="title">Intermediate</div>
-                            <div class="price line space">R700</div>
-                            <div class="details">
-                                <p class="line space">Two Page</p>
-                                <p class="line space">1 month free support</p>
-                                <p class=" space">Mobile friendly design</p>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Cape Town, South Africa</p>
                             </div>
-                            <a href="#learn-more">
-                                <div class="btn"><p>Learn more</p></div>
-                            </a>
                         </div>
-                        <div class="cards">
-                            <div class="title">Standard</div>
-                            <div class="price line space">R1400</div>
-                            <div class="details">
-                                <p class="line space">Three Page</p>
-                                <p class="line space">1 month free suppport</p>
-                                <p class=" space">Mobile friendly design</p>
+                        <div class="contact-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open to freelance & full-time opportunities</p>
                             </div>
-                            <a href="#learn-more">
-                                <div class="btn"><p>Learn more</p></div>
-                            </a>
                         </div>
                     </div>
-            </div>
-
-            <div id="projects" class="tabcontent">
-                <div id="carousel">
-                    <div class="projects">
-                        <div class="project">
-                            <div class="overlay"></div>
-                            <img src="./img/formula.png" alt="">
-                        </div>
-                        <div class="project">
-                            <div class="overlay"></div>
-                            <img src="./img/sundays.png" alt="">
-                        </div>
-                        <div class="project">
-                            <div class="overlay"></div>
-                            <img src="./img/marvel.png" alt="">
-                        </div>
-                        <div class="project">
-                            <div class="overlay"></div>
-                            <img src="./img/ecom.png" alt="">
-                        </div>
-                        <div class="project">
-                            <div class="overlay"></div>
-                            <img src="./img/todo.jpeg" alt="">
-                        </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/lee-leibrandt-5563521a5/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-
-            <div id="Calender" class="tabcontent">
-                <div class="section-phone">
-                    <div class="screen">
-                        <img src="./img/02.png" alt="img">
-                    </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required />
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="footer">
-            <div id="learn-more" class="foot-content">
-                <div class="foot-about">
-                    <h1>About</h1>
-                    <p>I am dedicated to delivering cost-effective, solution-driven outcomes. My goal is to create exceptional, visually captivating websites for all clients. With an extensive array of design services, I am committed to meeting industry standards and ensuring the best user experience. My aim is to create websites that not only stand out but also leave a lasting impression, keeping your end-users coming back for more.</p>
-                </div>
-                <div class="foot-find">
-                    <h1>Find US</h1>
-                    <h4>Name:</h4>
-                    <p>Lee Leibrandt</p>
-                    <h4>Email:</h4>
-                    <p>leeleibrandt9@gmail.com</p>
-                    <!-- <h4>Hours:</h4>
-                    <p>Monday - Friday: 9:00AM - 15:00PM</p> -->
-                </div>
-                <div class="foot-social">
-                    <h1>Socials</h1>
-                    <div class="socials">
-                        <a href="https://github.com/LeeLeibrandt"><i class="fa fa-github"></i></a>
-                        <a href="https://www.instagram.com/lee.it_/"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/lee-leibrandt-5563521a5/"><i class="fa fa-linkedin-square"></i></a>
-                    </div>
-                </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Lee Leibrandt. Crafted with passion and code.</p>
+                <a href="#home" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
-            <a href="#home" class="scroll-down">
-                <div class="arrow"><span></span></div>
-                <div class="mouse"><span></span></div>
-            </a>
         </div>
-        
-    </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
 </body>
-
-<script src="./js/main.js"></script>
 </html>
